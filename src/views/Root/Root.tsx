@@ -1,22 +1,30 @@
-import React, { FunctionComponent, useState } from 'react';
-import { Button } from 'components/atoms/Button/Button';
-import { Card } from 'components/molecules/Card/Card';
-import { Wrapper, Heading } from './Root.styles';
-import ResultBox from 'components/atoms/ResultBox/ResultBox';
-import { GlobalStyle } from 'assets/styles/GlobalStyle';
+import React, { FunctionComponent } from 'react';
+import { Switch, Route, Link } from 'react-router-dom';
+import ClickPage from 'views/ClickPage/ClickPage';
+import WelcomePage from 'views/WelcomePage/WelcomePage';
 
 const Root: FunctionComponent = () => {
-  const [value, setValue] = useState(0);
-
   return (
-    <Wrapper>
-      <GlobalStyle />
-      <Card>
-        <Heading>Hello world</Heading>
-        <ResultBox value={value} />
-        <Button onClick={() => setValue(value + 1)}>test</Button>
-      </Card>
-    </Wrapper>
+    <>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/click">About</Link>
+          </li>
+        </ul>
+      </nav>
+      <Switch>
+        <Route path="/click">
+          <ClickPage />
+        </Route>
+        <Route path="/">
+          <WelcomePage />
+        </Route>
+      </Switch>
+    </>
   );
 };
 
