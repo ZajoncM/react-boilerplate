@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
-const unusedVar = '';
-
-const Root = () => {
+const Root: FunctionComponent = () => {
   return <div className="App">learn react</div>;
 };
 
