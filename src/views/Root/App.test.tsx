@@ -4,6 +4,6 @@ import Root from './Root';
 
 test('renders learn react link', () => {
   render(<Root />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText(/learn basic/i);
   expect(linkElement).toBeInTheDocument();
 });
