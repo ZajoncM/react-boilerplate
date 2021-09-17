@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import Root from './Root';
 import AppProvider from 'providers/AppProvider';
 
-describe('Search Bar', () => {
+describe('Root', () => {
   it('render Root component', () => {
     render(
       <AppProvider>
