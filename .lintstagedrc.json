@@ -2,6 +2,6 @@
     "src/**/*.{js,ts,jsx,tsx}": [
         "prettier --write",
         "eslint --fix",
-        "npm run test -- --watchAll=false --passWithNoTests"
+        "npm run test -- --watchAll=false"
     ]
 }
